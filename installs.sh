@@ -15,11 +15,24 @@ yay -S --needed rustup && rustup default stable
 
 yay -S --needed sublime-text-4 obsidian
 
+# Install rofi's theme
+git clone https://github.com/lr-tech/rofi-themes-collection.git ~/rofi-themes-collection
+cd rofi-themes-collection
+mkdir -p ~/.local/share/rofi/themes/
+cp themes/nord.rasi ~/.local/share/rofi/themes/nord.rasi
+
+
 
 echo "Fixing discord's .desktop file"
 sudo rm -f /usr/share/applications/discord.desktop
 sudo cp discord.desktop /usr/share/applications/discord.desktop
 
+
+# Make firefox the default browser
+xdg-mime default firefox.desktop x-scheme-handler/http
+xdg-mime default firefox.desktop scheme-handler/http
+xdg-mime default firefox.desktop x-scheme-handler/https
+xdg-mime default firefox.desktop scheme-handler/https
 
 # Manage dotfiles
 
@@ -37,4 +50,4 @@ done
 sudo code --install-extension teabyii.ayu
 
 sudo rm -f ~/.config/Code\ -\ OSS/User/settings.json
-ln -s ~/dotfiles/vscode/settings.json ~/.config/Code\ -\ OSS/User/settings.json
+ln -s ~/dotfiles/code/settings.json ~/.config/Code\ -\ OSS/User/settings.json
