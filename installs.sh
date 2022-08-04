@@ -35,4 +35,7 @@ do
 	ln -s ~/dotfiles/$conf ~/.config/$conf
 done
 
+code --install-extension teabyii.ayu
 
+rm -r ~/.config/Code\ -\ OSS/User/settings.json
+ln -s ~/dotfiles/$conf ~/.config/Code\ -\ OSS/User/settings.json
