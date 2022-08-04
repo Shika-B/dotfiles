@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=Discord
+StartupWMClass=discord
+Comment=All-in-one voice and text chat for gamers that's free, secure, and works on both your desktop a>
+GenericName=Internet Messenger
+Exec=discord --no-sandbox --ignore-gpu-blocklist --disable-features=UseOzonePlatform --enable-features=>
+Icon=discord
+Type=Application
+Categories=Network;InstantMessaging;
+X-Desktop-File-Install-Version=0.26
